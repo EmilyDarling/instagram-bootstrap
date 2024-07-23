@@ -1,0 +1,12 @@
+textarea{
+    width: 300px;
+    display: block;
+}
+.nav-pills .nav-link.active{
+    background-color: transparent;
+    color: blue;
+}
+.nav-link{
+    background-color: transparent;
+    color: black;
+}

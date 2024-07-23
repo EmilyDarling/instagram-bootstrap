@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <script src="https://kit.fontawesome.com/6381f5fe18.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <script src="https://kit.fontawesome.com/6381f5fe18.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Instagram Photo Feed</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row bg-light"> 
+<!-- -----------Nav--------------------------------------------------------------------- -->
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
+                  <a class="navbar-brand text-dark" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
                     <form class="d-flex" role="search">
-                        <button class="btn btn-success" type="submit">Create a new post</button>
+                        <button class="btn btn-success" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>
                         <button  type="button" class="btn btn-secondary">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       
@@ -28,72 +30,198 @@
                                     <i class="fa-solid fa-gear text-white"></i>
                                   </a>
                                   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                                   </ul>
                                 </li>                    
                               </ul>
                             </button> 
-                    </form>
-                  </div>
-                </div>
-              </nav>
-
-            <!-- <div class="col-6">
-                <i class="fa-brands fa-instagram"></i>
-                <span>Instagram</span>
-            </div>
-            <div class="col-6 d-flex justify-content-end">
-                <button type="button" class="btn btn-success">Create new post</button>
-                <div class="btn-group">   
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa-solid fa-gear"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div> 
-            </div> -->
-        </div>
-        <div class="row ">
-            <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                    <i class="fa-solid fa-border-all"></i>
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                    <i class="fa-solid fa-square"></i>                
-                </button>
-                </li>
-                
-              </ul>
-              
-              <div class="tab-content7 container" id="pills-tabContent">
-                <div class="tab-pane fade show active mx-5 row justify-content-center" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                   <div class="col-4 ">
-                       <p class="fw-bolder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque quod delectus, et numquam tenetur quo. Sunt, corrupti temporibus?</p>
-
+                        </form>
                    </div>
-
-                </div>
-                </div>
-            
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque quod delectus, et numquam tenetur quo. Sunt, corrupti temporibus?</p>
-
-                </div>
-              </div>   
+                  </div>
+                </nav>
+          </div>
         </div>
 
-    </div>
+<!-- -----------Modal---------------------------------------------------------------------------------- -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Caption:</p>
+                <textarea name="post" id="post" placeholder="Add the caption of your post here" ></textarea>
+                <button class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                <button class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- -----------Nav Pills- main page content--------------------------------------------------------------------- -->
+
+        <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active pill-btn-trans" id="pills-gallery-tab" data-bs-toggle="pill" data-bs-target="#pills-gallery" type="button" role="tab" aria-controls="pills-gallery" aria-selected="true"><i class="fa-solid fa-border-all"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link pill-btn-trans" id="pills-feed-tab" data-bs-toggle="pill" data-bs-target="#pills-feed" type="button" role="tab" aria-controls="pills-feed" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+          </li>
+        </ul>
+        <div class="tab-content d-flex justify-content-center" id="pills-tabContent">
+<!-- -----------Gallery Page--------------------------------------------------------------------- -->
+
+          <div class="tab-pane fade show active" id="pills-gallery" role="tabpanel" aria-labelledby="pills-gallery-tab" tabindex="0">
+            <div class="container">
+              <div class="row ">
+                <div class="col-4"><img src="images/asia.jpg" class=" img-fluid"></div>
+                <div class="col-4"><img src="images/camping.jpg" class=" img-fluid"></div>
+                <div class="col-4"><img src="images/friends.jpg" class=" img-fluid"></div>
+                
+              </div>
+              <div class="row my-3">
+                <div class="col-4"><img src="images/hiking.jpg" class=" img-fluid"></div>
+                <div class="col-4"><img src="images/lan.jpg" class=" img-fluid"></div>
+                <div class="col-4"><img src="images/movienight4.JPG" class=" img-fluid"></div>
+              </div>
+              <div class="row my-3">
+                <div class="col-4"><img src="images/puppy.jpeg" class=" img-fluid"></div>
+                <div class="col-4"><img src="images/sunset-beach.jpg" class=" img-fluid"></div>
+                <div class="col-4"><img src="images/vacatioh.jpg" class=" img-fluid"></div>
+              </div>
+            </div>
+
+          </div>
+
+<!-- -----------Feed Page--------------------------------------------------------------------- -->
+          <div class="tab-pane fade" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab" tabindex="0">
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Vacation spot!</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/asia.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsam maiores, placeat odio animi exercitationem!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Camping</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/camping.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Friends</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/friends.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Hiking</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/hiking.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Lan Party!</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/lan.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Movie Night</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/movienight4.JPG" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>New Puppy!</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/puppy.jpeg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Beach Day</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/sunset-beach.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+
+            <div class="card mb-3" style="width:30rem;">
+              <div class="card-title d-flex justify-content-between mx-2 mt-2">
+                <h5>Vacation pt 2</h5>
+                <span>10/15</span>
+              </div>
+              <img src="images/vacatioh.jpg" class="card-img-top">
+              <div class="card-body"> 
+                <p class="card-text fw-bolder mb-1">6285 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat enim distinctio, deleniti sequi vel quibusdam!</p>               
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+
+
 </body>
 </html>
